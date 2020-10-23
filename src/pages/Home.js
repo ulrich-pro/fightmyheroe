@@ -2,15 +2,15 @@ import React, { useEffect, memo } from 'react';
 import { connect } from 'react-redux';
 import { Alert, Jumbotron } from 'react-bootstrap';
 
-import { dispatchGetHeroePatialDetails as dispatchGetHeroe } from '../store/actions/heroes';
+import { dispatchGetHeroePatialDetails } from '../store/actions/heroes';
 import Heroe from '../components/molecules/cards/Heroe';
 import ButtonWithLink from '../components/atoms/buttons/ButtonWithLink';
 import CenteredContent from '../components/atoms/common/CenteredContent';
 
-const Home = memo(({ dispatchGetHeroe, heroes }) => {
+const Home = memo(({ dispatchGetHeroePatialDetails, heroes }) => {
   // retrieve main heroe when the page is created
   useEffect(() => {
-    dispatchGetHeroe();
+    dispatchGetHeroePatialDetails();
   }, []);
   return (
     <>
@@ -66,7 +66,7 @@ const mapStateToProps = ({ heroes }) => ({
 });
 
 const mapDispatchToProps = {
-  dispatchGetHeroe,
+  dispatchGetHeroePatialDetails,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

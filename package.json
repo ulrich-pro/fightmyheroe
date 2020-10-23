@@ -1,5 +1,9 @@
 {
-  "name": "whoismyhero",
+  "name": "fightmyhero",
+  "author": {
+    "email": "ulrich.kikissagbe@gmail.com",
+    "name": "Ulrich"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,11 +33,10 @@
     "eject": "react-scripts eject",
     "lint": "eslint --cache --color --ext .jsx,.js src",
     "lintfix": "eslint --cache --color --fix --ext .jsx,.js src",
-    "stylelint": "stylelint './**/*.scss'; exit 0",
-    "stylelintfix": "stylelint './**/*.scss' --fix",
+    "stylelint": "stylelint './**/*.*css'; exit 0",
+    "stylelintfix": "stylelint './**/*.*css' --fix",
     "precommit": "lint-staged",
     "analyse": "npm build && source-map-explorer 'build/static/js/*.js'",
-    "deploy": "npm build && aws s3 sync build/ s3://ulrich-school-management --delete",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },

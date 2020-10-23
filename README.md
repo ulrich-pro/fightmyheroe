@@ -1,5 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Goal
+
+Know more about heroes and their powerstats.
+
+## Principe
+
+Each period a heroe is set at the stared and reasons this choice is made are explained at the launch of the projet (at home)
+We can choose to fight this heroe against others (choosen randomly by default or you can search one), based on their powerstats.
+At the end of each fight a details of the powerstats for each fighter is available in order to know more about them.
+An history of all fights is also available when fighting.
+
+Heroes datas come from https://superheroapi.com/
+
+## Technical Features
+
+- Atomic Design as project architecture https://atomicdesign.bradfrost.com/table-of-contents/
+- Redux as store
+- react-bootstrap as UI framework
+- PropTypes as props type validation
+- styled-components as component styling (CSS in JS)
+- storybook graphical UI exposing available components in the project https://storybook.js.org/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -37,6 +59,26 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+### `yarn lint`
+
+Lint your project javascript files with eslint and display coding style errors
+
+### `yarn stylelint`
+
+Lint your project styles file with stylelint and display coding style errors
+
+### `yarn precommit`
+
+Run precommit hook to lint your project in order to commit only code that are correct syntaxically.
+
+### `yarn analyse`
+
+Analyse your code and display files/lib that are space consumming
+
+### `yarn storybook`
+
+Display the storybook of the available components in your project. (see http://storybook.js.org/ for more)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -46,10 +88,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ### Code Splitting
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
 ### Making a Progressive Web App
 
