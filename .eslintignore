@@ -1,0 +1,19 @@
+# /node_modules/* and /bower_components/* ignored by default
+
+.storybook/*
+.vscode/*
+.next/*
+build/*
+config/*
+coverage/*
+doc/*
+out/*
+docker/*
+interfaces/*
+public/*
+scripts/*
+storybook-static/*
+serviceWorker.js
+serviceWorker.js
+*.test.js
+src/stories/*
