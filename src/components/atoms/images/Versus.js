@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Col, Image } from 'react-bootstrap';
 import styled from 'styled-components';
 
-import CenteredContent from './CenteredContent';
+import CenteredContent from '../common/CenteredContent';
 
 const StyledElement = styled(Col)`
   margin: auto;

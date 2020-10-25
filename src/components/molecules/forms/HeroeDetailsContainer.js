@@ -6,11 +6,12 @@ import HeroeDetailsForm from './HeroeDetailsForm';
 const HeroeDetailsContainer = memo(({ heroeId }) => {
   const [heroe, setHeroe] = useState({});
 
+  const fetchData = async () => {
+    const response = await Axios.get(`${process.env.REACT_APP_API_URL}/${parseInt(heroeId, 10)}`);
+    setHeroe(response.data);
+  };
+
   useEffect(() => {
-    async function fetchData() {
-      const response = await Axios.get(`${process.env.REACT_APP_API_URL}/${parseInt(heroeId, 10)}`);
-      setHeroe(response.data);
-    }
     fetchData();
   }, []); // Or [] if effect doesn't need props or state
 

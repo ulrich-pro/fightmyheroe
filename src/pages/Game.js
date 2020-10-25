@@ -9,7 +9,7 @@ import { SET_OPPONENT, SELECT_ITEM, SET_STARED } from '../store/reducers/heroes'
 import HeroeHabilities from '../components/molecules/forms/HeroeHabilities';
 import SearchHeroe from '../components/organisms/game/SearchHeroe';
 import CenteredContent from '../components/atoms/common/CenteredContent';
-import Versus from '../components/atoms/common/Versus';
+import Versus from '../components/atoms/images/Versus';
 import OldFights from '../components/organisms/game/OldFights';
 
 const Game = memo(({ dispatchSetItem, dispatchGetHeroePatialDetails, heroes }) => {

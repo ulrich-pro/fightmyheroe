@@ -36,7 +36,7 @@
     "stylelint": "stylelint './**/*.*css'; exit 0",
     "stylelintfix": "stylelint './**/*.*css' --fix",
     "precommit": "lint-staged",
-    "analyse": "npm build && source-map-explorer 'build/static/js/*.js'",
+    "analyse": "npm run build && source-map-explorer 'build/static/js/*.js'",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },

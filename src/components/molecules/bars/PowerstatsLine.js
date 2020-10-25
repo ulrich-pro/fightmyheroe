@@ -33,7 +33,6 @@ PowerstatsLine.propTypes = {
     'dark',
     'outline-dark',
   ]),
-  // data: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   data: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
 };

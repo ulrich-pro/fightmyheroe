@@ -3,13 +3,14 @@ import Button from 'react-bootstrap/Button';
 
 import Heroe from './Heroe';
 
+const WinBtn = memo(({ win, heroe }) => (
+  <Button variant="success" onClick={() => win(heroe)}>
+    Choose as Winner
+  </Button>
+));
+
 const HeroeFightCard = memo(({ win, heroe, selected }) => {
-  const WinBtn = () => (
-    <Button variant="success" onClick={() => win(heroe)}>
-      Choose as Winner
-    </Button>
-  );
-  return <Heroe heroe={heroe} footer={selected ? null : <WinBtn />} />;
+  return <Heroe heroe={heroe} footer={selected ? null : <WinBtn heroe={heroe} win={win} />} />;
 });
 
 export default HeroeFightCard;

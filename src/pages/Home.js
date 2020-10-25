@@ -10,7 +10,11 @@ import CenteredContent from '../components/atoms/common/CenteredContent';
 const Home = memo(({ dispatchGetHeroePatialDetails, heroes }) => {
   // retrieve main heroe when the page is created
   useEffect(() => {
-    dispatchGetHeroePatialDetails();
+    // at the creation of the component if the stared heroe is not set (for exemple on page refresh)
+    // we retrieved it also
+    if (!heroes.stared.id) {
+      dispatchGetHeroePatialDetails();
+    }
   }, []);
   return (
     <>

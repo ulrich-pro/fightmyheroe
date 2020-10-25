@@ -8,19 +8,20 @@ Know more about heroes and their powerstats.
 
 Each period a heroe is set at the stared and reasons this choice is made are explained at the launch of the projet (at home)
 We can choose to fight this heroe against others (choosen randomly by default or you can search one), based on their powerstats.
-At the end of each fight a details of the powerstats for each fighter is available in order to know more about them.
-An history of all fights is also available when fighting.
+At the end of each fight the result and a details of the powerstats for each fighter is available in order to know more about them.
+An history of all fights is also available when fighting.(remove localstorage in order to reset datas about stared heroe and fight history).
 
 Heroes datas come from https://superheroapi.com/
 
 ## Technical Features
 
 - Atomic Design as project architecture https://atomicdesign.bradfrost.com/table-of-contents/
-- Redux as store
+- Redux + redux-persist as store management
 - react-bootstrap as UI framework
 - PropTypes as props type validation
 - styled-components as component styling (CSS in JS)
 - storybook graphical UI exposing available components in the project https://storybook.js.org/
+- eslint + stylelint as linters
 
 ## Available Scripts
 

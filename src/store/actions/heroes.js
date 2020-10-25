@@ -1,9 +1,12 @@
 import Axios from 'axios';
 
-import { SET_STARED, SELECT_ITEM, ADD_ITEM_TO_LIST } from '../reducers/heroes';
-
-const MAX_FIGHTER_ID = 731; // biggest heroe's id according to the documentation https://superheroapi.com/ids.html
-const MIN_FIGHTER_ID = 1; // lowest heroe's id
+import {
+  SET_STARED,
+  SELECT_ITEM,
+  ADD_ITEM_TO_LIST,
+  MAX_FIGHTER_ID,
+  MIN_FIGHTER_ID,
+} from '../reducers/heroes';
 
 function setItem(item, type) {
   return {
@@ -45,17 +48,12 @@ export function dispatchGetHeroe(id = null, type = SET_STARED) {
 export function dispatchGetHeroePatialDetails(id = null, type = SET_STARED) {
   return async (dispatch, getState) => {
     console.warn('state before: ', getState());
-    const heroeId =
-      id || Math.floor(Math.random() * (MAX_FIGHTER_ID - MIN_FIGHTER_ID + 1)) + MIN_FIGHTER_ID;
-    const biography = await Axios.get(
-      `${process.env.REACT_APP_API_URL}/${parseInt(heroeId, 10)}/biography`
-    );
-    const image = await Axios.get(
-      `${process.env.REACT_APP_API_URL}/${parseInt(heroeId, 10)}/image`
-    );
-    const powerstats = await Axios.get(
-      `${process.env.REACT_APP_API_URL}/${parseInt(heroeId, 10)}/powerstats`
-    );
+    const heroeId = id
+      ? parseInt(id, 10)
+      : Math.floor(Math.random() * (MAX_FIGHTER_ID - MIN_FIGHTER_ID + 1)) + MIN_FIGHTER_ID;
+    const biography = await Axios.get(`${process.env.REACT_APP_API_URL}/${heroeId}/biography`);
+    const image = await Axios.get(`${process.env.REACT_APP_API_URL}/${heroeId}/image`);
+    const powerstats = await Axios.get(`${process.env.REACT_APP_API_URL}/${heroeId}/powerstats`);
     const response = {
       ...biography.data,
       image: { url: image.data.url },

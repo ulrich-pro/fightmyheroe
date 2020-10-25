@@ -4,10 +4,14 @@ export const SELECT_ITEM = 'HEROES_SELECT_ITEM';
 export const SET_STARED = 'HEROES_SET_STARED';
 export const SET_OPPONENT = 'HEROES_SET_OPPONENT';
 
+export const MAX_FIGHTER_ID = 731; // biggest heroe's id according to the documentation https://superheroapi.com/ids.html
+export const MIN_FIGHTER_ID = 1; // lowest heroe's id
+
 const initialHeroe = {
   name: '',
   image: {},
 };
+
 // all possible powerstats of an heroe
 const ALL_CRITERIAS = ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat'];
 

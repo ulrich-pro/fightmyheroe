@@ -34,7 +34,7 @@ const OldFights = memo(({ fights }) => {
           {fights.map((fight, eventKey) => (
             <OldFightLine
               eventKey={eventKey.toString()}
-              key={fight.stared.id + fight.opponent.id + fight.criteria}
+              key={fight.stared.id + fight.opponent.id + fight.criteria + eventKey.toString()}
               fight={fight}
             />
           ))}
